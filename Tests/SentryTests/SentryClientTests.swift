@@ -746,6 +746,8 @@ class SentryClientTest: XCTestCase {
         let eventId = sut.capture(error: error)
         eventId.assertIsEmpty()
         assertNothingSent()
+
+        XCTAssertTrue(false, "test failing assertion")
     }
 
     func testNoDsn_SessionsNotSent() {
